@@ -11,4 +11,4 @@ def obtener_ramas():
 
     response = requests.request("GET", url, data=payload, headers=headers)
 
-    return response.text
+    return response.json()

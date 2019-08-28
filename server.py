@@ -1,4 +1,3 @@
-import json
 import gitbucket
 from flask import Flask, request, jsonify
 from flask_restful import Api, Resource
@@ -9,7 +8,7 @@ api = Api(app)
 ## Resource class
 class GitBucket(Resource):
     def get(self):
-        return json.loads(gitbucket.obtener_ramas()), 200
+        return gitbucket.obtener_ramas(), 200
 
 ##
 ## Actually setup the Api resource routing here
